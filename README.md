@@ -1,4 +1,4 @@
-# 💼 NGUYEN MAI TRANG
+# NGUYEN MAI TRANG
 **Aspiring Financial Analyst | FTU Student | Passionate about Investment & Market Insights**
 
 ---
