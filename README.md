@@ -1,18 +1,21 @@
 # Developer Portfolios
+# NGUYEN MAI TRANG
 
-A list of developer portfolios for your inspiration
+### 🎓 Education
+* **Foreign Trade University (FTU)**
+* **Major:** Financial Analysis and Investment (Sophomore)
 
-Have you built a portfolio? Are you proud of it?! Open a [Pr](./CONTRIBUTING.md) to this repo and
+### 🌟 Experience
+* **Sub-leader** – Market Research Club (MRC - FTU)
+* **Chemistry Tutor** (Freelance) - Simplifying complex concepts and improving student performance.
 
-This repo was inspired by [Ali Spittel'S](https://twitter.com/ASpittel) tweet
+### 📧 Contact
+* **Email:** trangnguyen14112006@gmail.com
+* **GitHub:** [Trang141230](https://github.com/Trang141230)
 
-<a href="https://twitter.com/ASpittel/status/1171604728951779328">
-	<img width="597" alt="Ali Spittel's inspiring tweet about developer portfolios" src="assets/ASpittel_tweet.png">
-</a>
+---
+*Welcome to my portfolio! I am an aspiring Financial Analyst committed to continuous growth and delivering value.*
 
-This repo can serve as inspiration for your portfolio!
-
-[Developer Portfolios Website](https://6e87v.hatchboxapp.com)
 
 ## Current Portfolio Count: 1545
 
