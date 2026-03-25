@@ -3,76 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NGUYEN MAI TRANG | Portfolio v3</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@500;600&display=swap" rel="stylesheet">
+    <title>NGUYEN MAI TRANG | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --bg: #fdfaf7; --primary: #d4a373; --accent: #e5989b; --petal: #ffb7c5; }
-        body { font-family: 'Quicksand', sans-serif; background: var(--bg); margin: 0; padding: 40px 20px; overflow-x: hidden; }
+        :root { --bg: #fdfaf7; --primary: #d4a373; --accent: #e5989b; --text: #6b705c; --white: #ffffff; --petal: #ffb7c5; }
+        body { font-family: 'Quicksand', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; padding: 40px 20px; line-height: 1.8; overflow-x: hidden; position: relative; }
 
-        /* --- HOA RƠI --- */
-        .petal { width: 12px; height: 12px; background: var(--petal); border-radius: 100% 0 100% 0; position: fixed; top: -20px; z-index: 0; animation: fall linear infinite; }
+        /* HOA RƠI LUNG LINH */
+        .petal { width: 12px; height: 12px; background-color: var(--petal); border-radius: 100% 0 100% 0; position: fixed; top: -20px; z-index: 0; animation: fall linear infinite; pointer-events: none; }
         @keyframes fall {
-            0% { top: -20px; transform: rotate(0deg); opacity: 0; }
+            0% { top: -20px; transform: translateX(0px) rotate(0deg); opacity: 0; }
             10% { opacity: 0.8; }
-            100% { top: 100vh; transform: translateX(100px) rotate(720deg); opacity: 0; }
+            100% { top: 100vh; transform: translateX(150px) rotate(720deg); opacity: 0; }
         }
         .petal:nth-child(1) { left: 10%; animation-duration: 7s; }
-        .petal:nth-child(2) { left: 40%; animation-duration: 10s; animation-delay: 2s; }
-        .petal:nth-child(3) { left: 70%; animation-duration: 8s; animation-delay: 4s; }
+        .petal:nth-child(2) { left: 30%; animation-duration: 10s; animation-delay: 2s; }
+        .petal:nth-child(3) { left: 50%; animation-duration: 8s; animation-delay: 4s; }
+        .petal:nth-child(4) { left: 70%; animation-duration: 12s; }
+        .petal:nth-child(5) { left: 90%; animation-duration: 9s; animation-delay: 3s; }
 
-        /* --- HIỆU ỨNG NHẢY MẠNH (BOUNCE) --- */
-        .card { 
-            background: white; padding: 30px; border-radius: 20px; margin-bottom: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border: 1px solid #eee;
-            position: relative; z-index: 1;
-            /* Hiệu ứng nhảy khi lướt qua */
-            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); 
+        /* HIỆU ỨNG NHẢY KHI VỪA VÀO TRANG */
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.05); opacity: 1; }
+            70% { transform: scale(0.9); }
+            100% { transform: scale(1); }
         }
 
-        /* KHI DI CHUỘT VÀO: NHẢY LÊN MẠNH */
+        .container { max-width: 800px; margin: auto; position: relative; z-index: 1; }
+        header { text-align: center; margin-bottom: 50px; animation: bounceIn 1s ease; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 3em; color: var(--primary); margin: 0; }
+        
+        /* HIỆU ỨNG NHẢY KHI DI CHUỘT (HOVER) */
+        .card { 
+            background: var(--white); padding: 35px; border-radius: 20px; 
+            box-shadow: 0 10px 40px rgba(181,131,141,0.1); margin-bottom: 30px; 
+            border: 1px solid rgba(212,163,115,0.1);
+            animation: bounceIn 1.2s ease;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); 
+        }
         .card:hover { 
-            transform: translateY(-20px) scale(1.05); 
-            box-shadow: 0 25px 50px rgba(229, 152, 155, 0.3);
+            transform: translateY(-20px) rotate(1deg); /* Nhảy lên cao và hơi nghiêng */
+            box-shadow: 0 25px 50px rgba(181,131,141,0.25);
             border-color: var(--accent);
         }
 
-        /* HIỆU ỨNG NHẢY TỰ ĐỘNG KHI VỪA VÀO TRANG */
-        .card { animation: entrance 1s ease-out; }
-        @keyframes entrance {
-            0% { transform: scale(0.5); opacity: 0; }
-            70% { transform: scale(1.1); }
-            100% { transform: scale(1); opacity: 1; }
-        }
-
-        h1 { font-family: 'Playfair Display', serif; font-size: 3em; color: var(--primary); text-align: center; }
-        h2 { color: var(--primary); border-bottom: 2px solid var(--accent); display: inline-block; }
+        h2 { font-family: 'Playfair Display', serif; color: var(--primary); border-bottom: 2px solid var(--accent); display: inline-block; margin-bottom: 20px; }
+        .item-title { font-weight: 600; color: var(--accent); display: block; font-size: 1.1em; }
         .research-box { background: #fefae0; padding: 15px; border-radius: 12px; border-left: 5px solid var(--primary); }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        .contact-info { text-align: center; margin-top: 50px; animation: bounceIn 1.5s ease; }
     </style>
 </head>
 <body>
-    <div class="petal"></div><div class="petal"></div><div class="petal"></div>
-    <div class="container" style="max-width: 800px; margin: auto;">
+    <div class="petal"></div><div class="petal"></div><div class="petal"></div><div class="petal"></div><div class="petal"></div>
+
+    <div class="container">
         <header>
             <h1>NGUYEN MAI TRANG</h1>
-            <p style="text-align: center; font-style: italic; color: var(--accent);">✨ Aspiring Financial Analyst | FTU Student</p>
+            <p style="font-style: italic; color: var(--accent); font-size: 1.1em;">🌟 Aspiring Financial Analyst | FTU Student | Investment & Market Insights</p>
         </header>
 
         <section class="card">
             <h2>✨ ABOUT ME</h2>
-            <p>Second-year student at <b>Foreign Trade University</b>. Analytical, resilient, and passionate about Finance.</p>
+            <p>I am a second-year student at <b>Foreign Trade University</b>, majoring in Financial Analysis and Investment, with a strong ambition to pursue a career in finance. I am a resilient and adaptable individual who performs well under pressure.</p>
+            <p>Through my experience in tutoring and extracurricular activities, I have developed strong analytical thinking and effective communication skills. I am committed to continuous self-improvement and delivering long-term value in the financial field.</p>
         </section>
 
         <section class="card">
             <h2>🔬 SCIENTIFIC RESEARCH</h2>
             <div class="research-box">
-                <p><b>Member</b> - Blockchain in ESG Reporting Transparency.</p>
+                <span class="item-title">Member of Scientific Research Team</span>
+                <p style="margin: 5px 0;"><b>Project:</b> Blockchain Technology in ESG Reporting Transparency.</p>
+                <p style="margin: 5px 0;"><b>Methodology:</b> PLS-SEM Modeling.</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>💼 EXPERIENCE</h2>
+            <div style="margin-bottom: 25px;">
+                <span class="item-title">Sub-leader – Talkshow Series | Market Research Club</span>
+                <ul>
+                    <li>Supported the organization and execution of talkshows on market trends and business insights.</li>
+                    <li>Coordinated team members to ensure smooth collaboration.</li>
+                    <li>Contributed to content development and communication with speakers.</li>
+                </ul>
+            </div>
+            <div>
+                <span class="item-title">Chemistry Tutor (Freelance)</span>
+                <ul>
+                    <li>Delivered personalized tutoring sessions for high school students.</li>
+                    <li>Simplified complex concepts into clear and understandable explanations.</li>
+                    <li>Helped students improve academic performance and confidence.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>🧠 SKILLS</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <ul>
+                    <li>Financial Analysis & Investment Fundamentals</li>
+                    <li>Analytical Thinking & Data Interpretation</li>
+                    <li>Research & Market Awareness</li>
+                    <li>Communication & Presentation Skills</li>
+                </ul>
+                <ul>
+                    <li>Teamwork & Coordination</li>
+                    <li>Problem-solving & Critical Thinking</li>
+                    <li>Time Management & Self-discipline</li>
+                </ul>
             </div>
         </section>
 
         <section class="card" style="text-align: center;">
-            <p>📫 <a href="mailto:trangnguyen14112006@gmail.com" style="color: var(--accent); text-decoration: none;">trangnguyen14112006@gmail.com</a> | 📞 0372129062</p>
+            <h2>🌍 LANGUAGES</h2>
+            <p><b>English:</b> Working Proficiency | <b>Chinese:</b> Basic Communication</p>
         </section>
+
+        <div class="contact-info">
+            <p>📫 📧 <b>Email:</b> <a href="mailto:trangnguyen14112006@gmail.com" style="color: var(--accent); text-decoration: none;">trangnguyen14112006@gmail.com</a></p>
+            <p>📞 <b>Phone:</b> 0372129062</p>
+        </div>
     </div>
 </body>
 </html>
