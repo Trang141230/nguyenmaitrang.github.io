@@ -4,50 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NGUYEN MAI TRANG | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --pink: #fce4ec; --mint: #e0f2f1; --dark: #455a64; --accent: #f06292; --green: #00796b; }
-        body { font-family: 'Quicksand', sans-serif; background: var(--pink); color: var(--dark); margin: 0; padding: 20px; line-height: 1.6; }
-        .container { max-width: 850px; margin: auto; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        h1 { color: var(--accent); font-size: 2.5em; margin-bottom: 5px; text-align: center; }
-        .tagline { font-weight: 600; color: #4db6ac; text-align: center; margin-bottom: 30px; border-bottom: 2px solid var(--mint); padding-bottom: 15px; font-size: 1.1em; }
-        h2 { background: var(--mint); display: inline-block; padding: 6px 20px; border-radius: 12px; color: var(--green); font-size: 1.2em; margin-top: 30px; margin-bottom: 15px; }
-        .section-content { padding: 0 10px; font-size: 1.05em; text-align: justify; }
-        .item { margin-bottom: 25px; padding-left: 15px; border-left: 4px solid var(--pink); }
-        .item-title { font-weight: 600; color: var(--accent); font-size: 1.1em; display: block; margin-bottom: 5px; }
-        .contact-box { background: #fff5f8; padding: 25px; border-radius: 15px; border: 1px dashed var(--accent); margin-top: 40px; }
-        ul { padding-left: 20px; margin-top: 5px; }
-        li { margin-bottom: 8px; }
-        b { color: var(--green); }
-        .skills-grid { display: grid; grid-row-gap: 5px; }
-        a { color: inherit; text-decoration: none; }
+        :root { 
+            --bg: #fdfaf7; /* Màu nền kem nhã nhặn */
+            --primary: #d4a373; /* Màu nâu vàng sang trọng */
+            --accent: #e5989b; /* Màu hồng tro thanh lịch */
+            --text: #6b705c; 
+            --white: #ffffff;
+        }
+        body { 
+            font-family: 'Quicksand', sans-serif; 
+            background-color: var(--bg); 
+            color: var(--text); 
+            margin: 0; 
+            padding: 40px 20px; 
+            line-height: 1.8; 
+        }
+        .container { 
+            max-width: 800px; 
+            margin: auto; 
+        }
+        header { 
+            text-align: center; 
+            margin-bottom: 50px; 
+            animation: fadeIn 1.5s;
+        }
+        h1 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 3em; 
+            color: var(--primary); 
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        .tagline { 
+            font-style: italic; 
+            color: var(--accent); 
+            font-size: 1.1em;
+            letter-spacing: 1px;
+        }
+        .card { 
+            background: var(--white); 
+            padding: 35px; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 40px rgba(181, 131, 141, 0.1); 
+            margin-bottom: 30px;
+            border: 1px solid rgba(212, 163, 115, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover { transform: translateY(-5px); }
+        h2 { 
+            font-family: 'Playfair Display', serif; 
+            color: var(--primary); 
+            border-bottom: 1px solid var(--accent); 
+            display: inline-block; 
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .item-title { font-weight: 600; color: var(--accent); display: block; font-size: 1.1em; }
+        .research-box { background: #fefae0; padding: 15px; border-radius: 10px; border-left: 4px solid var(--primary); }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        .contact-info { text-align: center; margin-top: 50px; font-weight: 500; }
+        .contact-info a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>NGUYEN MAI TRANG</h1>
-        <p class="tagline">🌟 Aspiring Financial Analyst | FTU Student | Investment & Market Insights</p>
-        
-        <div class="section">
-            <h2>✨ ABOUT ME</h2>
-            <div class="section-content">
-                <p>I am a second-year student at <b>Foreign Trade University</b>, majoring in Financial Analysis and Investment, with a strong ambition to pursue a career in finance. I am a resilient and adaptable individual who performs well under pressure.</p>
-                <p>Through my experience in tutoring and extracurricular activities, I have developed strong analytical thinking and effective communication skills. I am committed to continuous self-improvement and delivering long-term value in the financial field.</p>
-            </div>
-        </div>
+        <header>
+            <h1>NGUYEN MAI TRANG</h1>
+            <p class="tagline">✨ Aspiring Financial Analyst | FTU Student | Investment & Market Insights</p>
+        </header>
 
-        <div class="section">
+        <section class="card">
+            <h2>✨ ABOUT ME</h2>
+            <p>I am a second-year student at <b>Foreign Trade University</b>, majoring in Financial Analysis and Investment, with a strong ambition to pursue a career in finance. I am a resilient and adaptable individual who performs well under pressure.</p>
+            <p>Through my experience in tutoring and extracurricular activities, I have developed strong analytical thinking and effective communication skills. I am committed to continuous self-improvement and delivering long-term value in the financial field.</p>
+        </section>
+
+        <section class="card">
             <h2>🔬 SCIENTIFIC RESEARCH</h2>
-            <div class="item">
+            <div class="research-box">
                 <span class="item-title">Member of Scientific Research Team</span>
                 <p style="margin: 5px 0;"><b>Project:</b> Blockchain Technology in ESG Reporting Transparency.</p>
                 <p style="margin: 5px 0;"><b>Methodology:</b> PLS-SEM Modeling.</p>
             </div>
-        </div>
+        </section>
 
-        <div class="section">
+        <section class="card">
             <h2>💼 EXPERIENCE</h2>
-            <div class="item">
+            <div style="margin-bottom: 25px;">
                 <span class="item-title">Sub-leader – Talkshow Series | Market Research Club</span>
                 <ul>
                     <li>Supported the organization and execution of talkshows on market trends and business insights.</li>
@@ -55,7 +102,7 @@
                     <li>Contributed to content development and communication with speakers.</li>
                 </ul>
             </div>
-            <div class="item">
+            <div>
                 <span class="item-title">Chemistry Tutor (Freelance)</span>
                 <ul>
                     <li>Delivered personalized tutoring sessions for high school students.</li>
@@ -63,35 +110,32 @@
                     <li>Helped students improve academic performance and confidence.</li>
                 </ul>
             </div>
-        </div>
+        </section>
 
-        <div class="section">
+        <section class="card">
             <h2>🧠 SKILLS</h2>
-            <ul class="skills-grid">
-                <li>Financial Analysis & Investment Fundamentals</li>
-                <li>Analytical Thinking & Data Interpretation</li>
-                <li>Research & Market Awareness</li>
-                <li>Communication & Presentation Skills</li>
-                <li>Teamwork & Coordination</li>
-                <li>Problem-solving & Critical Thinking</li>
-                <li>Time Management & Self-discipline</li>
-            </ul>
-        </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <ul style="margin: 0;">
+                    <li>Financial Analysis & Investment</li>
+                    <li>Analytical Thinking</li>
+                    <li>Research & Market Awareness</li>
+                    <li>Communication & Presentation</li>
+                </ul>
+                <ul style="margin: 0;">
+                    <li>Teamwork & Coordination</li>
+                    <li>Problem-solving</li>
+                    <li>Time Management</li>
+                </ul>
+            </div>
+        </section>
 
-        <div class="section">
+        <section class="card" style="text-align: center;">
             <h2>🌍 LANGUAGES</h2>
-            <ul>
-                <li><b>English:</b> Working Proficiency</li>
-                <li><b>Chinese:</b> Basic Communication</li>
-            </ul>
-        </div>
+            <p><b>English:</b> Working Proficiency | <b>Chinese:</b> Basic Communication</p>
+        </section>
 
-        <div class="contact-box">
-            <h2>📫 CONTACT</h2>
-            <p style="font-size: 1.1em;">
-                📧 <b>Email:</b> <a href="mailto:trangnguyen14112006@gmail.com">trangnguyen14112006@gmail.com</a><br>
-                📞 <b>Phone:</b> 0372129062
-            </p>
+        <div class="contact-info">
+            <p>📫 Let's connect: <a href="mailto:trangnguyen14112006@gmail.com">trangnguyen14112006@gmail.com</a> | 📞 0372129062</p>
         </div>
     </div>
 </body>
