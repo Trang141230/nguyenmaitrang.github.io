@@ -11,22 +11,22 @@
         .container { max-width: 850px; margin: auto; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
         h1 { color: var(--accent); font-size: 2.5em; margin-bottom: 5px; text-align: center; }
         .tagline { font-weight: 600; color: #4db6ac; text-align: center; margin-bottom: 30px; border-bottom: 2px solid var(--mint); padding-bottom: 15px; font-size: 1.1em; }
-        h2 { background: var(--mint); display: inline-block; padding: 6px 20px; border-radius: 12px; color: var(--green); font-size: 1.3em; margin-top: 30px; margin-bottom: 15px; }
+        h2 { background: var(--mint); display: inline-block; padding: 6px 20px; border-radius: 12px; color: var(--green); font-size: 1.2em; margin-top: 30px; margin-bottom: 15px; }
         .section-content { padding: 0 10px; font-size: 1.05em; text-align: justify; }
-        .experience-item { margin-bottom: 25px; padding-left: 15px; border-left: 4px solid var(--pink); }
-        .job-title { font-weight: 600; color: var(--accent); font-size: 1.15em; display: block; margin-bottom: 5px; }
+        .item { margin-bottom: 25px; padding-left: 15px; border-left: 4px solid var(--pink); }
+        .item-title { font-weight: 600; color: var(--accent); font-size: 1.1em; display: block; margin-bottom: 5px; }
         .contact-box { background: #fff5f8; padding: 25px; border-radius: 15px; border: 1px dashed var(--accent); margin-top: 40px; }
         ul { padding-left: 20px; margin-top: 5px; }
         li { margin-bottom: 8px; }
         b { color: var(--green); }
-        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-        @media (max-width: 600px) { .skills-grid { grid-template-columns: 1fr; } }
+        .skills-grid { display: grid; grid-row-gap: 5px; }
+        a { color: inherit; text-decoration: none; }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>NGUYEN MAI TRANG</h1>
-        <p class="tagline">✨ Aspiring Financial Analyst | FTU Student | Passionate about Investment & Market Insights</p>
+        <p class="tagline">🌟 Aspiring Financial Analyst | FTU Student | Investment & Market Insights</p>
         
         <div class="section">
             <h2>✨ ABOUT ME</h2>
@@ -37,17 +37,26 @@
         </div>
 
         <div class="section">
+            <h2>🔬 SCIENTIFIC RESEARCH</h2>
+            <div class="item">
+                <span class="item-title">Member of Scientific Research Team</span>
+                <p style="margin: 5px 0;"><b>Project:</b> Blockchain Technology in ESG Reporting Transparency.</p>
+                <p style="margin: 5px 0;"><b>Methodology:</b> PLS-SEM Modeling.</p>
+            </div>
+        </div>
+
+        <div class="section">
             <h2>💼 EXPERIENCE</h2>
-            <div class="experience-item">
-                <span class="job-title">Sub-leader – Talkshow Series | Market Research Club</span>
+            <div class="item">
+                <span class="item-title">Sub-leader – Talkshow Series | Market Research Club</span>
                 <ul>
                     <li>Supported the organization and execution of talkshows on market trends and business insights.</li>
                     <li>Coordinated team members to ensure smooth collaboration.</li>
                     <li>Contributed to content development and communication with speakers.</li>
                 </ul>
             </div>
-            <div class="experience-item">
-                <span class="job-title">Chemistry Tutor (Freelance)</span>
+            <div class="item">
+                <span class="item-title">Chemistry Tutor (Freelance)</span>
                 <ul>
                     <li>Delivered personalized tutoring sessions for high school students.</li>
                     <li>Simplified complex concepts into clear and understandable explanations.</li>
@@ -58,19 +67,15 @@
 
         <div class="section">
             <h2>🧠 SKILLS</h2>
-            <div class="skills-grid">
-                <ul>
-                    <li>Financial Analysis & Investment Fundamentals</li>
-                    <li>Analytical Thinking & Data Interpretation</li>
-                    <li>Research & Market Awareness</li>
-                    <li>Communication & Presentation Skills</li>
-                </ul>
-                <ul>
-                    <li>Teamwork & Coordination</li>
-                    <li>Problem-solving & Critical Thinking</li>
-                    <li>Time Management & Self-discipline</li>
-                </ul>
-            </div>
+            <ul class="skills-grid">
+                <li>Financial Analysis & Investment Fundamentals</li>
+                <li>Analytical Thinking & Data Interpretation</li>
+                <li>Research & Market Awareness</li>
+                <li>Communication & Presentation Skills</li>
+                <li>Teamwork & Coordination</li>
+                <li>Problem-solving & Critical Thinking</li>
+                <li>Time Management & Self-discipline</li>
+            </ul>
         </div>
 
         <div class="section">
@@ -84,7 +89,7 @@
         <div class="contact-box">
             <h2>📫 CONTACT</h2>
             <p style="font-size: 1.1em;">
-                📧 <b>Email:</b> <a href="mailto:trangnguyen14112006@gmail.com" style="text-decoration: none; color: inherit;">trangnguyen14112006@gmail.com</a><br>
+                📧 <b>Email:</b> <a href="mailto:trangnguyen14112006@gmail.com">trangnguyen14112006@gmail.com</a><br>
                 📞 <b>Phone:</b> 0372129062
             </p>
         </div>
